@@ -1,14 +1,14 @@
 settings
 item | verdict | evidence
-system prompt | same | Sol, the released twelve-model files, and the appendix forced-choice prompt are one string, including the trailing space (51 harness files, 50 released files).
-user message format | same | 51/51 harness prompts are vignette, blank line, Choice 1, Choice 2. 50/50 benchmark prompts match the released file byte for byte.
-choice order | same | Choice 1 precedes Choice 2 on 51/51 files, and the choice texts match cases.csv on 50/50 benchmark cases.
+system prompt | same | Sol, the released twelve-model files, and the appendix forced-choice prompt are one string, including the trailing space (50 rerun files, 50 released files).
+user message format | same | 50/50 rerun prompts are vignette, blank line, Choice 1, Choice 2. 50/50 benchmark prompts match the released file byte for byte.
+choice order | same | Choice 1 precedes Choice 2 on 50/50 rerun files, and the choice texts match cases.csv on 50/50 benchmark cases.
 temperature | same | Sol temperatures [1.0]; released temperatures [1.0].
 runs per case | same | Sol run counts [10]; released run counts [10].
-run dates | different | Sol created 2026-07-25T18:29:41+00:00 to 2026-07-25T21:22:36+00:00 (2026-07-25, 510 runs). Released runs 2026-01-11T23:09:00+00:00 to 2026-01-16T04:22:18+00:00 (2026-01-11 to 2026-01-16, 6000 runs). Sol provider field ['OpenAI'], response model field ['openai/gpt-5.6-sol'].
-case set | different | Benchmark and the released files are 50 ids. The harness directory has 51. Extra ['24bf2c00-5b29-4701-9930-39798cd6c75b']; missing none. The comparison below drops the extra id.
+run dates | different | Sol created 2026-07-25T18:29:41+00:00 to 2026-07-25T21:22:36+00:00 (2026-07-25, 500 runs). Released runs 2026-01-11T23:09:00+00:00 to 2026-01-16T04:22:18+00:00 (2026-01-11 to 2026-01-16, 6000 runs). Sol provider field ['OpenAI'], response model field ['openai/gpt-5.6-sol'].
+case set | same | Benchmark and the released files are 50 ids. The rerun directory has 50. Extra none; missing none. 24bf2c00-5b29-4701-9930-39798cd6c75b is not in the rerun.
 parser model | same | Records store no parser id (Sol run keys: ['full_response', 'parsed_choice']). On 25 July 2026 the committed config was 7ddac7fdf17b587a2c1d13e0f927359fe797f7f0:src/config/decisions.yaml:110:  parser_model: openai/gpt-4o-mini  # Model used to parse LLM responses. The commit that added the Sol labels (017926bda9cff07f858a37beb7dfc8c0a96a83bc 2026-08-08 01:03:21 -0400 Add new physician recommendations from Claude Opus 5) had 017926bda9cff07f858a37beb7dfc8c0a96a83bc:src/config/decisions.yaml:110:  parser_model: openai/gpt-4o-mini  # Model used to parse LLM responses. Those labels match HEAD on 51/51 files. HEAD now has HEAD:values_harness/config/decisions.yaml:111:  parser_model: anthropic/claude-sonnet-5  # Model used to parse LLM responses. The 25 July parser prompt is the appendix prompt: choice_1, choice_2, or REFUSAL, and it does not mention INCOHERENT (True). logs/physician_recommendation/new_models_worker_01.log routes Sol through OpenRouter (True) and is timestamped 2026-07-25 (True). Parsers match, so the 50-response re-parse was not run.
-refusals | different | Sol on the 50 benchmark cases: 0 REFUSAL in 500 runs {'choice_1': 257, 'choice_2': 243}. Extra case 24bf2c00-5b29-4701-9930-39798cd6c75b: {'choice_1': 10}. Released twelve models: 9 REFUSAL ({'z-ai/glm-4.6 REFUSAL': 7, 'meta-llama/llama-4-maverick REFUSAL': 1, 'moonshotai/kimi-k2-thinking REFUSAL': 1}).
+refusals | different | Sol on the 50 benchmark cases: 0 REFUSAL in 500 runs {'choice_1': 257, 'choice_2': 243}. Extra case 24bf2c00-5b29-4701-9930-39798cd6c75b: not in the rerun. Released twelve models: 9 REFUSAL ({'z-ai/glm-4.6 REFUSAL': 7, 'meta-llama/llama-4-maverick REFUSAL': 1, 'moonshotai/kimi-k2-thinking REFUSAL': 1}).
 incoherent | same | Sol on the 50 benchmark cases: 0 INCOHERENT. Released twelve models: 0 INCOHERENT.
 analysis cases
   50 benchmark ids; 24bf2c00-5b29-4701-9930-39798cd6c75b omitted

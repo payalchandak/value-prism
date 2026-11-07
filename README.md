@@ -7,7 +7,7 @@ ValuePrism is a benchmark of 50 clinical cases. Each case offers two choices, ta
 ```bibtex
 @inproceedings{valueprism2026,
   title={Do Language Models Share Your Doctor's Priorities? Measuring Values from Clinical Decisions},
-  author={<authors>},
+  author={Payal Chandak, Victoria Alkin, David Wu, Maya Dagan, Taposh Dutta Roy, Maria Clara Saad Menezes, Ayush Noori, Nirali Somia, John S. Brownstein, Ran Balicer, Rebecca W. Brendel, Noa Dagan, Isaac S. Kohane, Gabriel A. Brat},
   booktitle={Advances in Neural Information Processing Systems},
   year={2026}
 }
@@ -20,6 +20,7 @@ The data are described in [data/README.md](data/README.md):
 - `data/benchmark/` — the 50 cases (`cases.csv`)
 - `data/human_decisions/` — one DecisionRecord per case for physicians P01–P25
 - `data/llm_decisions/` — the same shape for twelve models, ten runs each
+- `data/llm_decisions_rerun/` — GPT-5.6 Sol on the same 50 cases, ten runs each
 - `data/value_annotations/` — independent tag ratings from annotators R1–R8
 
 `src/valueprism/` is the analysis package:

@@ -181,30 +181,33 @@ def main() -> None:
         check(str(k), counted.get(k, 0), PAPER_ENGAGED.get(k, 0))
 
     print("choice counts vs values-analysis loader")
-    human_1, human_2, model_1, model_2 = analysis_choice_counts()
-    case_ids = set(cases["case_id"])
-    physicians = decisions[decisions["group"] == "physician"]
-    llms = decisions[decisions["group"] == "llm"]
-    print_mismatches(
-        "physician choice-1 mismatches",
-        mismatches(choice_counts(physicians, 1), human_1, case_ids),
-    )
-    print_mismatches(
-        "physician choice-2 mismatches",
-        mismatches(choice_counts(physicians, 2), human_2, case_ids),
-    )
-    print_mismatches(
-        "model choice-1 mismatches",
-        mismatches(choice_counts(llms, 1), model_1, case_ids),
-    )
-    print_mismatches(
-        "model choice-2 mismatches",
-        mismatches(choice_counts(llms, 2), model_2, case_ids),
-    )
-    extra_cases = sorted({case_id for _maker, case_id in model_1 if case_id not in case_ids})
-    print(f"  analysis model cases not in the release: {len(extra_cases)}")
-    for case_id in extra_cases:
-        print(f"    {case_id}")
+    if not ANALYSIS_ROOT.is_dir():
+        print("  skipped: values-analysis repo is not present")
+    else:
+        human_1, human_2, model_1, model_2 = analysis_choice_counts()
+        case_ids = set(cases["case_id"])
+        physicians = decisions[decisions["group"] == "physician"]
+        llms = decisions[decisions["group"] == "llm"]
+        print_mismatches(
+            "physician choice-1 mismatches",
+            mismatches(choice_counts(physicians, 1), human_1, case_ids),
+        )
+        print_mismatches(
+            "physician choice-2 mismatches",
+            mismatches(choice_counts(physicians, 2), human_2, case_ids),
+        )
+        print_mismatches(
+            "model choice-1 mismatches",
+            mismatches(choice_counts(llms, 1), model_1, case_ids),
+        )
+        print_mismatches(
+            "model choice-2 mismatches",
+            mismatches(choice_counts(llms, 2), model_2, case_ids),
+        )
+        extra_cases = sorted({case_id for _maker, case_id in model_1 if case_id not in case_ids})
+        print(f"  analysis model cases not in the release: {len(extra_cases)}")
+        for case_id in extra_cases:
+            print(f"    {case_id}")
 
     print("flags")
     if flags:

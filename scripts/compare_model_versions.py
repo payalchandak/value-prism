@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 """Compare openai/gpt-5.6-sol with the released GPT-5.2 run.
 
-The Sol responses stay in values-harness. This script reads them and does
-not write there. Profiles, the uniform-weight likelihood-ratio test,
-entropy, and the physician bootstrap all go through the valueprism
-functions as they are. The bootstrap frame contains the physicians and
-Sol only, so Sol is not added to the twelve-model fit. The draw is the
-package default: 10,000 resamples, seed 42, physician ids sorted.
+Sol is read from data/llm_decisions_rerun/. Profiles, the uniform-weight
+likelihood-ratio test, entropy, and the physician bootstrap all go through
+the valueprism functions as they are. The bootstrap frame contains the
+physicians and Sol only, so Sol is not added to the twelve-model fit.
+The draw is the package default: 10,000 resamples, seed 42, physician ids
+sorted. The parser-settings audit reads values-harness history when that
+repo sits next to this one, and is skipped otherwise.
 """
 
 import json
@@ -23,6 +24,7 @@ from valueprism.diversity import pairwise_jsd
 from valueprism.reference import N_BOOTSTRAP, SEED, bootstrap_reference
 
 REPO = Path(__file__).resolve().parents[1]
+RERUN = REPO / "data" / "llm_decisions_rerun"
 HARNESS = REPO.parent / "values-harness"
 HARNESS_DECISIONS = HARNESS / "data" / "llm_decisions" / "physician_recommendation"
 RESULTS = REPO / "results" / "compare_model_versions.txt"
@@ -184,7 +186,7 @@ def print_settings(cases: pd.DataFrame, prism: dict[str, dict], harness: dict[st
         + ("same" if system_same else "different")
         + " | Sol, the released twelve-model files, and the appendix forced-choice"
         " prompt are one string, including the trailing space"
-        f" ({len(harness)} harness files, {len(prism)} released files)."
+        f" ({len(harness)} rerun files, {len(prism)} released files)."
     )
 
     case_by_id = cases.set_index("case_id")
@@ -223,7 +225,7 @@ def print_settings(cases: pd.DataFrame, prism: dict[str, dict], harness: dict[st
     print(
         "user message format | "
         + ("same" if user_same else "different")
-        + f" | {template_ok}/{len(harness)} harness prompts are vignette, blank line,"
+        + f" | {template_ok}/{len(harness)} rerun prompts are vignette, blank line,"
         " Choice 1, Choice 2. "
         f"{released_ok}/{len(benchmark_ids)} benchmark prompts match the released file"
         " byte for byte."
@@ -232,7 +234,7 @@ def print_settings(cases: pd.DataFrame, prism: dict[str, dict], harness: dict[st
     print(
         "choice order | "
         + ("same" if order_same else "different")
-        + f" | Choice 1 precedes Choice 2 on {order_ok}/{len(harness)} files, and the"
+        + f" | Choice 1 precedes Choice 2 on {order_ok}/{len(harness)} rerun files, and the"
         f" choice texts match cases.csv on {csv_ok}/{len(benchmark_ids)} benchmark cases."
     )
 
@@ -308,13 +310,14 @@ def print_settings(cases: pd.DataFrame, prism: dict[str, dict], harness: dict[st
         "case set | "
         + ("same" if case_same else "different")
         + f" | Benchmark and the released files are {len(benchmark_ids)} ids. "
-        f"The harness directory has {len(harness_ids)}. "
+        f"The rerun directory has {len(harness_ids)}. "
         f"Extra {extra or 'none'}; missing {missing or 'none'}. "
-        "The comparison below drops the extra id."
+        + (
+            "The comparison below drops the extra id."
+            if extra
+            else f"{EXCLUDED} is not in the rerun."
+        )
     )
-
-    print_parser(harness)
-    print_counts(prism, harness, benchmark_ids)
 
 
 def print_parser(harness: dict[str, dict]) -> None:
@@ -388,7 +391,10 @@ def print_counts(prism: dict[str, dict], harness: dict[str, dict], benchmark_ids
                     key = f"{model} {run['parsed_choice']}"
                     released[key] = released.get(key, 0) + 1
     sol_benchmark = count_labels(harness, benchmark_ids, SOL)
-    sol_extra = count_labels(harness, [EXCLUDED], SOL) if EXCLUDED in harness else {}
+    if EXCLUDED in harness:
+        extra_note = str(dict(sorted(count_labels(harness, [EXCLUDED], SOL).items())))
+    else:
+        extra_note = "not in the rerun"
     refusal_released = sum(count for key, count in released.items() if key.endswith("REFUSAL"))
     incoherent_released = sum(
         count for key, count in released.items() if key.endswith("INCOHERENT")
@@ -400,7 +406,7 @@ def print_counts(prism: dict[str, dict], harness: dict[str, dict], benchmark_ids
         + ("same" if sol_refusal == refusal_released else "different")
         + f" | Sol on the 50 benchmark cases: {sol_refusal} REFUSAL"
         f" in {sum(sol_benchmark.values())} runs {dict(sorted(sol_benchmark.items()))}. "
-        f"Extra case {EXCLUDED}: {dict(sorted(sol_extra.items()))}. "
+        f"Extra case {EXCLUDED}: {extra_note}. "
         f"Released twelve models: {refusal_released} REFUSAL"
         f" ({released or 'none'})."
     )
@@ -542,16 +548,27 @@ def main() -> None:
     cases, delta = load_cases()
     decisions = load_decisions()
     prism = load_json_dir(DATA_DIR / "llm_decisions")
-    harness = load_json_dir(HARNESS_DECISIONS)
+    if not RERUN.is_dir():
+        raise SystemExit(f"Sol decisions not found: {RERUN}")
+    rerun = load_json_dir(RERUN)
     benchmark_ids = list(cases["case_id"])
     if EXCLUDED in benchmark_ids:
         raise RuntimeError(f"{EXCLUDED} is in the benchmark table")
+    if EXCLUDED in rerun:
+        raise RuntimeError(f"{EXCLUDED} is in the rerun")
     if set(prism) != set(benchmark_ids):
         raise RuntimeError("released llm_decisions do not match cases.csv")
+    if set(rerun) != set(benchmark_ids):
+        raise RuntimeError("Sol rerun files do not match cases.csv")
 
-    print_settings(cases, prism, harness)
+    print_settings(cases, prism, rerun)
+    if HARNESS.is_dir() and HARNESS_DECISIONS.is_dir():
+        print_parser(load_json_dir(HARNESS_DECISIONS))
+    else:
+        print("parser model | skipped | values-harness repo is not present")
+    print_counts(prism, rerun, benchmark_ids)
 
-    sol = decision_frame(harness, benchmark_ids, SOL)
+    sol = decision_frame(rerun, benchmark_ids, SOL)
     gpt = decisions.loc[decisions["decision_maker"] == GPT52].copy()
     if set(sol["case_id"]) != set(benchmark_ids) or set(gpt["case_id"]) != set(benchmark_ids):
         raise RuntimeError("model case ids do not match the benchmark")
