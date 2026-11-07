@@ -81,11 +81,3 @@ The benchmark is the 50 cases in `data/benchmark/cases.csv`.
 ## Licenses
 
 Code is under the MIT license ([LICENSE](LICENSE)). Data are under CC BY 4.0 ([LICENSE-DATA](LICENSE-DATA)).
-
-## Coming soon
-
-These parts of the project are not in this release:
-
-- **Placeholder.** The case-generation pipeline.
-- **Placeholder.** The model-running harness.
-- **Placeholder.** The Overton and phrasing-invariance code.
