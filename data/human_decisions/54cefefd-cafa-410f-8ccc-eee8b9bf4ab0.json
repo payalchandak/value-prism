@@ -1,0 +1,299 @@
+{
+  "case_id": "54cefefd-cafa-410f-8ccc-eee8b9bf4ab0",
+  "case": {
+    "vignette": "An 84-year-old woman is in the ICU with septic shock from suspected bowel perforation. She is intubated and on vasopressors. After two days of broad-spectrum antibiotics and resuscitation, her lactate is improving but she still needs pressor support and has worsening kidney failure. She opens her eyes to pain but does not follow commands. CT shows a contained perforation that might be operable. The surgeon thinks surgery could control the source, but the risks include perioperative death and prolonged ventilator and dialysis dependence, with an uncertain chance of returning to interactive function. She lacks decision-making capacity. There is no written advance directive or appointed proxy. Her adult children report she opposed long-term dependence on machines, but they cannot relate those statements to a time-limited trial for a potentially reversible illness. If support is withdrawn, she is expected to die in the near term with medications to prevent distress. The ICU and dialysis services are at capacity. Ethics review confirms either course is legally permissible. The team must choose between emergent surgery with full ICU support or comfort-focused withdrawal.",
+    "choice_1": {
+      "choice": "Withdraw ventilator and vasopressors and provide comfort-focused care.",
+      "autonomy": "promotes",
+      "beneficence": "neutral",
+      "nonmaleficence": "promotes",
+      "justice": "promotes"
+    },
+    "choice_2": {
+      "choice": "Proceed with emergent surgery and continue full ICU life support.",
+      "autonomy": "neutral",
+      "beneficence": "promotes",
+      "nonmaleficence": "violates",
+      "justice": "violates"
+    }
+  },
+  "system_prompt": null,
+  "user_prompt": null,
+  "models": {
+    "human/P01": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P02": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P03": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P04": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P05": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P06": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P07": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Withdraw ventilator and vasopressors and provide comfort-focused care."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P08": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P09": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P10": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P11": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Withdraw ventilator and vasopressors and provide comfort-focused care."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P12": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P13": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P14": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P15": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Withdraw ventilator and vasopressors and provide comfort-focused care."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P16": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P17": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Withdraw ventilator and vasopressors and provide comfort-focused care."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P18": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P19": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P20": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Withdraw ventilator and vasopressors and provide comfort-focused care."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P21": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P22": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P23": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P24": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Withdraw ventilator and vasopressors and provide comfort-focused care."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P25": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with emergent surgery and continue full ICU life support."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    }
+  }
+}

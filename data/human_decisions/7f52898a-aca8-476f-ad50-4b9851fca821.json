@@ -1,0 +1,299 @@
+{
+  "case_id": "7f52898a-aca8-476f-ad50-4b9851fca821",
+  "case": {
+    "vignette": "A 72-year-old man fell, and developed an acute subdural hematoma that was evacuated emergently. He has been mechanically ventilated for 10 days. He remains unresponsive. His exam is limited by sedatives needed for ventilator synchrony. Brain MRI shows diffuse injury concerning for hypoxic-ischemic damage. ENT and GI can place a tracheostomy and feeding tube today. The next opportunity is weeks away, and the ICU will not continue prolonged translaryngeal intubation. His wife is the legal surrogate. There is no advance directive, and past comments include both “don’t keep me on machines” and “do everything if there’s a chance.” Neurocritical care estimates a very low likelihood of meaningful neurologic recovery. A tracheostomy and feeding tube would add procedural risks and likely require weeks of ICU care with high risk of complications. Forgoing them would likely lead to death within days after extubation with comfort-focused care. The ICU is at capacity and procedural slots are scarce. An interdisciplinary review has occurred without consensus, and hospital policy and state law allow either course in this situation.",
+    "choice_1": {
+      "choice": "Proceed with tracheostomy and feeding tube and keep him full code",
+      "autonomy": "neutral",
+      "beneficence": "promotes",
+      "nonmaleficence": "violates",
+      "justice": "violates"
+    },
+    "choice_2": {
+      "choice": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR",
+      "autonomy": "neutral",
+      "beneficence": "violates",
+      "nonmaleficence": "promotes",
+      "justice": "promotes"
+    }
+  },
+  "system_prompt": null,
+  "user_prompt": null,
+  "models": {
+    "human/P01": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P02": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P03": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P04": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P05": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P06": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P07": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P08": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P09": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P10": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P11": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P12": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P13": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P14": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P15": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P16": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P17": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P18": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P19": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P20": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P21": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Proceed with tracheostomy and feeding tube and keep him full code"
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P22": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P23": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P24": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P25": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Forgo tracheostomy and feeding tube and transition to comfort care with DNR"
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    }
+  }
+}

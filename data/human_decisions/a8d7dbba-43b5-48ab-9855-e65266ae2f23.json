@@ -1,0 +1,299 @@
+{
+  "case_id": "a8d7dbba-43b5-48ab-9855-e65266ae2f23",
+  "case": {
+    "vignette": "A 44-year-old woman is seen in your breast clinic for cancer-risk management. Her mother and two maternal aunts had premenopausal breast cancer. A multigene panel found no pathogenic variant, and no affected relative is available for confirmatory testing. Genetics considers her pedigree very high risk, but her exact risk remains uncertain. She has followed a high-risk program for years with alternating MRI and mammography every 6 months. Despite CBT and an SSRI trial, she has persistent anticipatory anxiety that disrupts sleep and work and has led to urgent visits; she has started postponing imaging and fears she will stop screening. She requests bilateral prophylactic mastectomy, which would be expected to substantially reduce breast-cancer risk but not eliminate it. She has decision-making capacity and has met with plastic surgery about optional reconstruction and possible numbness, chronic pain, body-image or sexual changes, and the possibility of re-operations. State law and hospital policy permit either approach.",
+    "choice_1": {
+      "choice": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction.",
+      "autonomy": "promotes",
+      "beneficence": "neutral",
+      "nonmaleficence": "violates",
+      "justice": "neutral"
+    },
+    "choice_2": {
+      "choice": "Do not schedule surgery now; continue enhanced surveillance and mental-health treatment.",
+      "autonomy": "violates",
+      "beneficence": "neutral",
+      "nonmaleficence": "promotes",
+      "justice": "neutral"
+    }
+  },
+  "system_prompt": null,
+  "user_prompt": null,
+  "models": {
+    "human/P01": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P02": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Do not schedule surgery now; continue enhanced surveillance and mental-health treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P03": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P04": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P05": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P06": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P07": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P08": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P09": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P10": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P11": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P12": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Do not schedule surgery now; continue enhanced surveillance and mental-health treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P13": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P14": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P15": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P16": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P17": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P18": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P19": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P20": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P21": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Do not schedule surgery now; continue enhanced surveillance and mental-health treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P22": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P23": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P24": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P25": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Schedule bilateral prophylactic mastectomy, with optional immediate reconstruction."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    }
+  }
+}

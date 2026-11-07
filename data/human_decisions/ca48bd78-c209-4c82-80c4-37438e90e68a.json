@@ -1,0 +1,299 @@
+{
+  "case_id": "ca48bd78-c209-4c82-80c4-37438e90e68a",
+  "case": {
+    "vignette": "A 50-year-old woman is referred for long-standing grief and depression after the deaths of two children. She lives alone and has withdrawn from supports. She reports persistent anhedonia, guilt, insomnia, and daily thoughts that life is not worth living. Over several visits, she consistently requests assisted dying. She states she refuses further psychiatric treatment, including structured complicated-grief therapy or neuromodulation. She denies suicidal intent outside the assisted-dying pathway and reports no acute plan or preparatory behaviors. Years ago she had a nonfatal overdose after a bereavement. She previously completed several antidepressant trials and supportive therapy, and she stopped them due to side effects and no relief. Two consultants find she can understand, appreciate, reason, and communicate a stable choice. They disagree on whether additional evidence-based treatments offer a meaningful chance of improvement. Assisted dying would end her suffering but is irreversible. Intensive treatment could require hospitalization and exposes her to medication side effects and restrictive monitoring. Hospital counsel confirms either course is legally permissible. The committee meets in two days, and without your recommendation the application closes for months.",
+    "choice_1": {
+      "choice": "Submit endorsement for assisted dying and prescribe life-ending medication per protocol.",
+      "autonomy": "promotes",
+      "beneficence": "neutral",
+      "nonmaleficence": "violates",
+      "justice": "neutral"
+    },
+    "choice_2": {
+      "choice": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment.",
+      "autonomy": "violates",
+      "beneficence": "promotes",
+      "nonmaleficence": "promotes",
+      "justice": "neutral"
+    }
+  },
+  "system_prompt": null,
+  "user_prompt": null,
+  "models": {
+    "human/P01": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P02": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P03": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P04": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P05": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Submit endorsement for assisted dying and prescribe life-ending medication per protocol."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P06": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Submit endorsement for assisted dying and prescribe life-ending medication per protocol."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P07": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Submit endorsement for assisted dying and prescribe life-ending medication per protocol."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P08": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P09": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P10": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P11": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Submit endorsement for assisted dying and prescribe life-ending medication per protocol."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P12": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P13": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P14": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P15": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Submit endorsement for assisted dying and prescribe life-ending medication per protocol."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P16": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P17": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Submit endorsement for assisted dying and prescribe life-ending medication per protocol."
+          },
+          "parsed_choice": "choice_1"
+        }
+      ]
+    },
+    "human/P18": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P19": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P20": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P21": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P22": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P23": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P24": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    },
+    "human/P25": {
+      "temperature": 0.0,
+      "runs": [
+        {
+          "full_response": {
+            "response_text": "Decline to endorse assisted dying and arrange voluntary intensive psychiatric treatment."
+          },
+          "parsed_choice": "choice_2"
+        }
+      ]
+    }
+  }
+}
