@@ -14,6 +14,10 @@ One `{case_id}.json` file per case, in the DecisionRecord shape shared with the 
 
 One `{case_id}.json` file per case. Same DecisionRecord shape, plus the `system_prompt` and `user_prompt` shown to the model. `models` holds twelve models, ten runs each. A run has `parsed_choice` and `full_response` (the provider completion payload).
 
+## llm_decisions_rerun/
+
+One `{case_id}.json` file per benchmark case for `openai/gpt-5.6-sol`, in the same DecisionRecord shape as `llm_decisions/`. Each file has the case, the prompts, and ten runs. The held-out case `24bf2c00-5b29-4701-9930-39798cd6c75b` is not included.
+
 ## value_annotations/
 
 `ratings.csv` is an independent re-annotation of the benchmark tags. One row per rater, case, choice, and value. Raters are R1–R8. There is no key from these labels back to a name. Every case has two or three ratings. `choice` is 1 or 2 in the same order as `benchmark/cases.csv`. `value` is autonomy, beneficence, nonmaleficence, or justice. `tag` is `promotes`, `violates`, or `neutral`. The source workbook's summary sheet has no ratings and is not included.
