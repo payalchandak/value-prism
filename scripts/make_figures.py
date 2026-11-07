@@ -377,12 +377,17 @@ def main() -> None:
     plot_case_entropy(panels, FIGURE_DIR / "case-level-entropy.png")
     plot_temperature(calibration, FIGURE_DIR / "temperature.png")
 
+    compare = PAPER_DIR.is_dir()
+    if not compare:
+        print("skipped side-by-side: paper figure directory is not present")
     for name in names:
         path = FIGURE_DIR / name
-        old = PAPER_DIR / name
         if not path.is_file():
             raise SystemExit(f"missing {path}")
         print(path.relative_to(REPO_ROOT))
+        if not compare:
+            continue
+        old = PAPER_DIR / name
         if not old.is_file():
             raise SystemExit(f"missing paper figure {old}")
         side_by_side(old, path, COMPARE_DIR / name)
