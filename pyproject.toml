@@ -1,0 +1,33 @@
+[project]
+name = "valueprism"
+version = "0.1.0"
+description = "Load the Value Prism benchmark and the decisions recorded on it."
+requires-python = "==3.12.*"
+dependencies = [
+    # Posterior means match the paper on NumPy 1.26.4 and PyMC 5.25.1.
+    # ArviZ 0.23.4 imports under Matplotlib 3.11; ArviZ 0.21 does not.
+    # firthlogist 0.5.0 caps NumPy below 2. scikit-learn 1.6 dropped the
+    # estimator hook that version calls, so the pin stays below 1.6.
+    "arviz==0.23.4",
+    "firthlogist==0.5.0",
+    "matplotlib==3.11.2",
+    "numpy==1.26.4",
+    "pandas==2.2.3",
+    "pydantic>=2",
+    "pymc==5.25.1",
+    "scikit-learn>=1.5,<1.6",
+    "scipy==1.15.3",
+    "statsmodels==0.14.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
